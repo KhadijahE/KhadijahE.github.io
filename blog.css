@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background: grey;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: whitesmoke;
+    border-style: solid;
+    height:300px;
+   
+  }
+
+  /* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  
+  /* Fake image 
+  use <div class="fakeimg">Image</div><br>
+*/
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border:1px solid black;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    
+    display: table;
+    clear: both;
+    border:1px solid black;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: darkgrey;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+/* Responsive layout for navigation bar */
+
+/*
+  @media (min-width: 600px){
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    nav li{
+        border-bottom: none;
+    }
+    section{
+        margin-left: 2em;
+        margin-right: 2em;
+        flex: 1;
+    }
+
+    .flow{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px){
+    #wrapper {
+        margin: auto;
+        width: 80%;
+        border: 1px solid #002171;
+        box-shadow: 3px 3px 3px #002171;
+    }
+    nav {
+        text-align: left;
+        padding-left: 1em;}
+        nav ul {flex-direction: column;
+            padding-top: 1em;}
+
+    @supports (display:grid){
+    
+        .hero {grid-area: hero;}
+        header{grid-area: header}
+        nav   {grid-area: nav;}
+        main  {grid-area: main;}
+        footer{grid-area: footer;}
+        #wrapper {
+            display: grid;
+            grid-template: "header header"
+                            "nav    hero"
+                            "nav    main"
+                            "nav    footer" / 180px 1fr;
+    }
+}   
+}
+*/
+
+  nav {
+    font-weight: bold;
+    padding: 8px;
+    font-size: 120%;
+
+    /*Add position: sticky; to <ul> to create a sticky navbar. */
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    }
+
+/* Layout for navigation bar*/
+nav li{
+
+    display: inline;
+    float: left;
+  }
+
+nav a{
+    
+    text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+   }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+
+/*  list-style-type: none;
+margin: 0;
+padding-left: 0;
+font-size: 1.2em;
+*/
+
+
+nav a:link{
+    color: #E0E0E0;
+}
+
+nav a:visited{
+    color: #A4ACB6
+}
+nav a:hover{
+    color: #1061C3;
+}
+
+/*  Logo Image */
+.header img {
+  float: inline-end;
+  width: 500px;
+  height: 500px;
+  background: none;
+}
+
+/*  Hero Images */
+
+#aurorahero{
+  height: 600px;
+  background-image: url(aurora.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+}
+#waterfallhero{
+  height: 600px;
+  background-image: url(waterfall.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#foodhero{
+  height: 600px;
+  background-image: url(sandholtpastry.jpeg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#lavahero{
+  height: 800px;
+  background-image: url(lava2.JPG);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+  
+#frozenwaterfallhero{
+    height: 800px;
+    background-image: url(frozenwaterfall.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+}
+#activityhero{
+  height: 800px;
+  background-image: url(activityhero.JPG);
+  background-size: 100% 100%;
+  background-repeat: no-repeat; 
+}
+#flighthero{
+  height: 800px;
+  background-image: url(flight.jpeg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat; 
+}
+#airbnbhero{
+  height: 800px;
+  background-image: url(airbnb.jpeg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat; 
+}
+#safetyhero{
+  height: 800px;
+  background-image: url(safety.jpeg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat; 
+}
+#packinghero{
+  height: 500px;
+  background-image: url(packinghero.JPG);
+  background-size: 100% 100%;
+  background-repeat: no-repeat; 
+}
+
+
+
+/* SIDE BY SIDE IMAGES */
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Table */
+
+table{ 
+  border:2px solid #000000;
+  border-collapse: collapse;
+}
+td, th {
+  padding: 0.5em;
+  border: 2px solid #000000;
+}
+td {text-align:center;}
+.text{text-align: left;}
+tr:nth-of-type(odd) {background-color: #F5FAFC;}
